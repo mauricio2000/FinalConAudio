@@ -30,12 +30,12 @@ client1.on_message = on_message
 st.title("Bienvenido a tu casa inteligente")
 
 image = Image.open('smartHouse.png')
-st.image(image,caption='Tu casa inteligente',width=500)
+st.image(image,caption='Tu casa inteligente',width=200)
 
 st.write("Aquí tienes tu control de luces con botones")
 
 image = Image.open('bombillo.png')
-st.image(image,caption=' ')
+st.image(image,caption=' ',width=200)
 
 if st.button('Encender luces'):
     act1="Encendido"
@@ -66,7 +66,7 @@ else:
 st.write("Aquí tienes un control para abrir y cerrar tu puerta")
 
 image = Image.open('puerta.png')
-st.image(image,caption=' ')
+st.image(image,caption=' ',width=200)
 
 if st.button('Abrir'):
     act2="Abrido"
