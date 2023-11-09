@@ -1,3 +1,5 @@
+import paho.mqtt.client as paho
+import json
 import os
 import streamlit as st
 import time
@@ -7,11 +9,7 @@ import pytesseract
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
-from PIL import Image
 from gtts import gTTS
-from googletrans import Translator
-import paho.mqtt.client as paho
-import json
 values = 0.0
 act1="OFF"
 act2="Cerrao"
