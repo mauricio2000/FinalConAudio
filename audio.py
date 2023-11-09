@@ -6,6 +6,7 @@ import time
 import glob
 import numpy as np
 import pytesseract
+from PIL import Image
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
@@ -24,12 +25,16 @@ def on_message(client, userdata, message):
     time.sleep(2)
     message_received=str(message.payload.decode("utf-8"))
     st.write(message_received)
+    
+st.title("Bienvenido a tu casa inteligente")
+
+image = Image.open('smartHouse.png')
+st.image(image,caption='Tu casa inteligente',width=200)
 
 if 5==5:
-
-        st.subheader("Has elegido AUDIO")
+        
         stt_button = Button(label=" Inicio ", width=200)
-        st.write("Toca el Botón y habla lo que quires traducir")
+        st.write("Da una instrucción")
         
         stt_button.js_on_event("button_click", CustomJS(code="""
             var recognition = new webkitSpeechRecognition();
@@ -77,8 +82,8 @@ client1.on_message = on_message
 
 
 
-st.title("Casa Inteligente cmqtt")
-st.write("Control de luces")
+
+
 if text=="encender":
     act1="Encendido"
     client1= paho.Client("ESTE_ES_MAURI2")                           
@@ -105,7 +110,7 @@ if text=="apagar":
 else:
     st.write('')
 
-st.write("Control puerta")
+
 
 if text=="abrir":
     act2="Abrido"
