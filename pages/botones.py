@@ -28,7 +28,15 @@ client1.on_message = on_message
 
 
 st.title("Bienvenido a tu casa inteligente")
+
+image = Image.open('smartHouse.png')
+st.image(image,caption='Tu casa inteligente')
+
 st.write("Aquí tienes tu control de luces con botones")
+
+image = Image.open('bombillo.png')
+st.image(image,caption=' ')
+
 if st.button('Encender luces'):
     act1="Encendido"
     client1= paho.Client("ESTE_ES_MAURI2")                           
@@ -56,6 +64,9 @@ else:
     st.write('')
 
 st.write("Aquí tienes un control para abrir y cerrar tu puerta")
+
+image = Image.open('puerta.png')
+st.image(image,caption=' ')
 
 if st.button('Abrir'):
     act2="Abrido"
