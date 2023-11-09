@@ -91,7 +91,8 @@ if text=="encender":
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
- 
+    image = Image.open('bombillo.png')
+    st.image(image,caption=' ',width=200)
     #client1.subscribe("Sensores")
     
     
@@ -105,6 +106,8 @@ if text=="apagar":
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
+    image = Image.open('bombillo.png')
+    st.image(image,caption=' ',width=200)
   
     
 else:
@@ -119,6 +122,8 @@ if text=="abrir":
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    image = Image.open('puerta.png')
+    st.image(image,caption=' ',width=200)
     
  
 else:
@@ -131,6 +136,8 @@ if text=="cerrar":
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    image = Image.open('puerta.png')
+    st.image(image,caption=' ',width=200)
     
  
 else:
