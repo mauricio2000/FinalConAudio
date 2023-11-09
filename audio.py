@@ -65,9 +65,7 @@ if 5==5:
                 os.mkdir("temp")
             except:
                 pass
-            st.title("Texto a Audio")
-            translator = Translator()
-            
+            st.title("Texto a Audio")            
             text = str(result.get("GET_TEXT"))
             text = text.lower()
             print(text)
