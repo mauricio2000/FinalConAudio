@@ -80,7 +80,7 @@ client1.on_message = on_message
 
 st.title("Casa Inteligente cmqtt")
 st.write("Control de luces")
-if text=="encender luces" or text=="encender":
+if text=="encender":
     act1="Encendido"
     client1= paho.Client("ESTE_ES_MAURI2")                           
     client1.on_publish = on_publish                          
@@ -94,7 +94,7 @@ if text=="encender luces" or text=="encender":
 else:
     st.write('')
 
-if text=="apagar luces" or text=="apagar":
+if text=="apagar":
     act1="Apagado"
     client1= paho.Client("ESTE_ES_MAURI2")                           
     client1.on_publish = on_publish                          
@@ -108,7 +108,7 @@ else:
 
 st.write("Control puerta")
 
-if text=="abrir puerta" or text=="abrir":
+if text=="abrir":
     act2="Abrido"
     client1= paho.Client("ESTE_ES_MAURI2")                           
     client1.on_publish = on_publish                          
@@ -120,7 +120,7 @@ if text=="abrir puerta" or text=="abrir":
 else:
     st.write('')
 
-if text=="cerrar puerta" or text=="cerrar":
+if text=="cerrar":
     act2="Cerrao"
     client1= paho.Client("ESTE_ES_MAURI2")                           
     client1.on_publish = on_publish                          
