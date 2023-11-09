@@ -30,7 +30,7 @@ client1.on_message = on_message
 st.title("Bienvenido a tu casa inteligente")
 
 image = Image.open('smartHouse.png')
-st.image(image,caption='Tu casa inteligente')
+st.image(image,caption='Tu casa inteligente',width=500)
 
 st.write("Aquí tienes tu control de luces con botones")
 
