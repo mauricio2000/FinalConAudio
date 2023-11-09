@@ -26,8 +26,8 @@ client1.on_message = on_message
 
 
 
-st.title("Casa Inteligente cmqtt")
-st.write("Control de luces")
+st.title("Bienvenido a tu casa inteligente")
+st.write("Aquí tienes tu control de luces con botones")
 if st.button('Encender luces'):
     act1="Encendido"
     client1= paho.Client("ESTE_ES_MAURI2")                           
@@ -54,7 +54,7 @@ if st.button('Apagar Luces'):
 else:
     st.write('')
 
-st.write("Control puerta")
+st.write("Aquí tienes un control para abrir y cerrar tu puerta")
 
 if st.button('Abrir'):
     act2="Abrido"
