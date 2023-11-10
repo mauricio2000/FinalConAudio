@@ -44,6 +44,7 @@ if st.button('Encender luces'):
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
+    st.write("Se han encendido las luces")
  
     #client1.subscribe("Sensores")
     
@@ -58,6 +59,7 @@ if st.button('Apagar Luces'):
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
+    st.write("Se han apagado las luces")
   
     
 else:
@@ -75,6 +77,7 @@ if st.button('Abrir'):
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    st.write("Se ha abierto la puerta")
     
  
 else:
@@ -87,6 +90,7 @@ if st.button('Cerrar'):
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    st.write("Se ha cerrado la puerta")
     
  
 else:
