@@ -18,7 +18,7 @@ def on_message(client, userdata, message):
     st.write(message_received)
 
         
-
+st.markdown('<style>' + open('estilo.css').read() + '</style>', unsafe_allow_html=True)
 
 broker="157.230.214.127"
 port=1883
