@@ -93,6 +93,7 @@ if text=="encender":
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
+    st.write("Se han encendido las luces")
     image = Image.open('bombillo.png')
     st.image(image,caption=' ',width=200)
     #client1.subscribe("Sensores")
@@ -108,6 +109,7 @@ if text=="apagar":
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("mauri1", message)
+    st.write("Se han apagado las luces")
     image = Image.open('bombillo.png')
     st.image(image,caption=' ',width=200)
   
@@ -124,6 +126,7 @@ if text=="abrir":
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    st.write("Se ha abierto la puerta")
     image = Image.open('puerta.png')
     st.image(image,caption=' ',width=200)
     
@@ -138,6 +141,7 @@ if text=="cerrar":
     client1.connect(broker,port)   
     message =json.dumps({"Act2": act2})
     ret= client1.publish("mauri1", message)
+    st.write("Se ha cerrado la puerta")
     image = Image.open('puerta.png')
     st.image(image,caption=' ',width=200)
     
